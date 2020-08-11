@@ -4,7 +4,7 @@ import numpy as np
 import pydeck as pdk
 import plotly_express as px
 
-filepath = '/home/rhyme/Desktop/Project/Motor_Vehicle_Collisions_-_Crashes.csv'
+filepath = './Motor_Vehicle_Collisions_-_Crashes.csv'
 
 st.title("Motor Vehicle Collisions in New York City")
 st.markdown("This application is a streamlit dashboard that can be used to analyze motor vehicle collisions in NYC")
@@ -29,6 +29,7 @@ st.map(data.query("injured_persons >= @injured_people")[['latitude', 'longitude'
 st.header("How many people are injuried at a hour?")
 hour = st.sidebar.slider("Hour to look at", 0, 23)
 data = data[data['date/time'].dt.hour == hour]
+st.write(data)
 
 midpoint = (np.average(data['latitude']), np.average(data['longitude']))
 
