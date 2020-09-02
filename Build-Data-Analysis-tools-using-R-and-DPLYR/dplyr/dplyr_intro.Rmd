@@ -1,0 +1,40 @@
+---
+title: "DPLYR Introduction"
+author: "Shakespeare"
+date: "September 3, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+setwd("\\Users\\Administrator\\Desktop\\Dplyr\\Dplyr_Intro")
+```
+
+
+#Quick look at dataframes
+
+```{r pressure, echo=FALSE, fig.cap="A caption", out.width = '100%'}
+knitr::include_graphics("df.png")
+```
+
+
+#Filter
+
+
+#Select
+
+#Pipe
+
+#Group By
+
+#Summarise
+
+#Mutate
+
+#Arrange
